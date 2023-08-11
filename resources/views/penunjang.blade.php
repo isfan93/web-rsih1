@@ -29,7 +29,7 @@
             <img src="img/curry.png" style="border-radius: 5px" alt="">
           </div>
           <div class="col-6">
-            <h2>Fasilitas</h2>
+            <h2>Fasilitas Radiologi 2</h2>
             <ul>
               <li>Bed Kamar</li>
               <li>Kamar Mandi</li>

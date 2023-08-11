@@ -33,7 +33,9 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Nama Poli</th>
-                                <th scope="col">Keterangan</th> 
+                                <th scope="col">Keterangan</th>
+                                <th scope="col">Kondisi</th>  
+                                <th scope="col">Gambar</th>  
                                 <th scope="col">Logo</th> 
                                 <th scope="col">Opsi</th>
                             </tr>
@@ -47,6 +49,8 @@
                                 <th>{{ $no++ }}</th>
                                 <td>{{ $po->nama_poli }}</td>
                                 <td>{{ $po->keterangan }}</td>
+                                <td>{{ $po->kondisi }}</td>
+                                <td><img src="img/foto-poli/{{ $po->gambar }}" alt="" style="width: 100px; height: 120px;"></td>
                                 <td><img src="img/logo-poli/{{ $po->logo }}" alt="" style="width: 100px; height: 120px;"></td>
                                 <td>
                                     <a href="#" class="btn btn-danger btn-sm delete" data-id="{{ $po->id }}" data-nama="{{ $po->nama_poli }}">Hapus</a>
@@ -63,17 +67,37 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                    <form action="/poanan/update/{{ $po->id }}" method="post">
+                                    <form action="/poli_a/update/{{ $po->id }}" method="post" enctype="multipart/form-data">
                                         {{ csrf_field() }}
                                         <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Nama Poliklinik</label>
-                                        <input type="text" class="form-control" id="recipient-name" name="nama_poanan" value="{{ $po->nama_poli }}">
+                                            <label for="recipient-name" class="col-form-label">Nama Poliklinik</label>
+                                            <input type="text" class="form-control" id="recipient-name" name="nama_poli" value="{{ $po->nama_poli }}">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="keterangan">{{ $po->keterangan }}</textarea>
+                                                <label for="floatingTextarea2">Keterangan</label>
+                                            </div>
+                                        </div>
+    
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="kondisi">{{ $po->kondisi }}</textarea>
+                                                <label for="floatingTextarea2">Kondisi</label>
+                                            </div>
+                                        </div>
+                                        <p style="color: red">Catatan : Gambar dan logo harus di isi bersamaan !!</p>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Masukan Gambar</label>
+                                            <input type="file" class="form-control" id="recipient-name" name="gambar">
+                                            <input type="hidden" value="{{ $po->gambar }}" name="gambar_old">
                                         </div>
                                         <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Masukan Gambar</label>
-                                        <input type="file" class="form-control" id="recipient-name" name="gambar" value="{{ $po->logo }}">
+                                            <label for="recipient-name" class="col-form-label">Masukan Logo</label>
+                                            <input type="file" class="form-control" id="recipient-name" name="logo">
+                                            <input type="hidden" value="{{ $po->logo }}" name="logo_old">
                                         </div>
-                                    
                                     </div>
                                     <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -102,11 +126,19 @@
                                     <label for="recipient-name" class="col-form-label">Nama Poliklinik</label>
                                     <input type="text" class="form-control" id="recipient-name" name="nama_poli">
                                     </div>
+
                                     <div class="mb-3">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="keterangan"></textarea>
-                                        <label for="floatingTextarea2">Keterangan</label>
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="keterangan"></textarea>
+                                            <label for="floatingTextarea2">Keterangan</label>
+                                        </div>
                                     </div>
+
+                                    <div class="mb-3">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="kondisi"></textarea>
+                                            <label for="floatingTextarea2">Kondisi</label>
+                                        </div>
                                     </div>
                                     
                                     <div class="mb-3">

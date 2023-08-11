@@ -6,9 +6,9 @@
 
   
 <!-- ======= Team Section ======= -->
-<section id="team" class="team section-bg">
+
   <div class="container">
-    
+{{--     
     <div class="row">     
       <div class="col-12">
         <div class="card">
@@ -45,7 +45,6 @@
                         <th>Jumat</th>
                         <th>Sabtu</th>
                         <th>Minggu</th>
-                        {{-- <th>Opsi</th> --}}
                     </tr>
                       
                   
@@ -68,63 +67,9 @@
                         <td style="font-weight: bold">{{ $jd->minggu }}</td>
                       
                         @endforeach
-                        {{-- <td> <img src="img/foto dokter/{{ $d->foto }}" alt=""> </td> --}}
-                        {{-- @foreach ($d->jadwal as $jad)
-                        <td style="font-weight: bold">{{ $jad->dari_jam }} - {{ $jad->sampai_jam }}</td>
-                        @endforeach --}}
-                        {{-- <td><button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#jadwal{{ $d->id }}">Lihat jadwal</button></td> --}}
-                    </tr>
+                      </tr>
                 </tbody>
-
-
                         
-                        {{-- modal Detail Dokter --}}
-                        <div class="modal fade" id="detaildok{{ $d->id }}" data-bs-backdrop="poli1" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                                {{-- <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">{{ $d->nama_dok }}</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div> --}}
-                                <div class="modal-body">
-                                    <div class="row">
-                                    <div class="col">
-                                        <img class="mx-auto d-block" src="/img/foto dokter/{{ $d->foto }}" style="border-radius: 5px" width="60%" alt="">
-                                        <div class="biodok">
-                                            <h2>{{ $d->nama_dok }}</h2>
-                                            <h3>{{ $d->keahlian }}</h3>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <ul>
-                                                    <li>{{ $d->ttl }}</li>
-                                                    <li>{{ $d->pendidikan }}</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-6">
-                                                <ul>
-                                                    <li>{{ $d->email }}</li>
-                                                    <li>4</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    </div>
-                                    <br>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                {{-- <button type="button" class="btn btn-primary">Understood</button> --}}
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        {{-- endmodal --}}
-
-                        
-
                 @endforeach
             </table>
             <br>
@@ -132,14 +77,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     
 
     <div class="row">
-      <div class="section-title mt-5">
+      {{-- <div class="section-title">
         <h2></h2>
         <p>Daftar Poliklinik</p>
-      </div>
+      </div> --}}
 
       <div class="row">
         <div class="col-md-6">

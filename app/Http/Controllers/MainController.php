@@ -7,6 +7,7 @@ use App\Models\Dokter;
 use App\Models\JadwalA;
 use App\Models\JadwalB;
 use App\Models\Layanan;
+use App\Models\Testimoni;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -201,7 +202,8 @@ class MainController extends Controller
     public function layanan()
     {
         $layanan = Layanan::all();
-        return view('home', ['layanan' => $layanan]);
+        $testi = Testimoni::paginate(4);
+        return view('home', ['layanan' => $layanan, 'testi' => $testi]);
     }
 
     public function poli($id)
@@ -209,4 +211,5 @@ class MainController extends Controller
         $poli = Poli::find($id);
         return view('poli', ['poli' => $poli]);
     }
+
 }

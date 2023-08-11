@@ -34,6 +34,7 @@
                                 <th scope="col">No</th>
                                 <th scope="col">Nama Dokter</th>
                                 <th scope="col">Pendidikan</th>
+                                <th scope="col">Pelatihan</th>
                                 <th scope="col">Keahlian</th>
                                 <th scope="col">Foto</th>                                
                                 <th scope="col">Opsi</th>
@@ -48,6 +49,7 @@
                                 <th>{{ $no++ }}</th>
                                 <td>{{ $dok->nama_dok }}</td>
                                 <td>{{ $dok->pendidikan }}</td>
+                                <td>{{ $dok->pelatihan }}</td>
                                 <td>{{ $dok->keahlian }}</td>
                                 <td><img src="img/foto dokter/{{ $dok->foto }}" alt="" style="width: 90px; height: 100px;"></td>
                                 <td>
@@ -81,7 +83,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                <form action="admin/dokter/update/{{ $dok->id }}" method="post">
+                                <form action="/dokter/update/{{ $dok->id }}" method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Nama Dokter</label>
@@ -90,6 +92,10 @@
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Pendidikan</label>
                                         <input type="text" class="form-control" id="recipient-name" name="pendidikan" value="{{ $dok->pendidikan }}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Pelatihan</label>
+                                        <input type="text" class="form-control" id="recipient-name" name="pendidikan" value="{{ $dok->pelatihan }}">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Keahlian</label>
@@ -201,6 +207,10 @@
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Pendidikan</label>
                                         <input type="text" class="form-control" id="recipient-name" name="pendidikan">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Pelatihan</label>
+                                        <input type="text" class="form-control" id="recipient-name" name="pelatihan">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Keahlian</label>

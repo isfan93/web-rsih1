@@ -9,7 +9,7 @@ class Poli extends Model
 {
 
     protected $table = 'poli_a';
-    protected $fillable = ['nama_poli', 'keterangan', 'gambar','logo'];
+    protected $fillable = ['nama_poli', 'keterangan','kondisi', 'gambar','logo'];
 
     public function dokter()
     {

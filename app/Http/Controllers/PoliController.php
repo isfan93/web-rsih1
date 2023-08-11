@@ -24,6 +24,7 @@ class PoliController extends Controller
         $this->validate($req, [
             'nama_poli' => 'required',
             'keterangan' => 'required',
+            'kondisi' => 'required',
             'gambar' => 'required|file|image|mimes:jpeg,png,jpg',
             'logo' => 'required|file|image|mimes:jpeg,png,jpg',
         ]);
@@ -41,6 +42,7 @@ class PoliController extends Controller
         Poli::create([
             'nama_poli' => $req->nama_poli,
             'keterangan' => $req->keterangan,
+            'kondisi' => $req->kondisi,
             'logo'=> $nama_file,
             'gambar' => $nama_file2,
         ]);
@@ -54,6 +56,37 @@ class PoliController extends Controller
         $poli = Poli::find($id);
         $poli->delete();
         return redirect('/poli_a');
+    }
+
+    public function update_poli($id, Request $req)
+    {
+        $poli = Poli::find($id);
+        
+        if($req->file('logo') && $req->file('gambar') == ""){
+            $poli->update([
+                'nama_poli' => $req->nama_poli,
+                'keterangan' => $req->keterangan,
+                'kondisi' => $req->kondisi,
+            ]);
+            Alert::success("Data berhasil di Update");    
+            return redirect('/poli_a');
+        }else{
+            $file = $req->file('logo');
+            $nama_file = $file->getClientOriginalName();
+            $folder_tujuan = 'img/logo-poli';
+            $file->move($folder_tujuan, $nama_file);
+            
+            $gambar = $req->file('gambar');
+            $nama_gambar = $gambar->getClientOriginalName();
+            $folder_tujuan2 = 'img/foto-poli';
+            $gambar->move($folder_tujuan2, $nama_gambar);
+
+            $poli->gambar = $nama_gambar;
+            $poli->logo = $nama_file;
+            $poli->save();
+            Alert::success("Data berhasil di Update");    
+            return redirect('/poli_a');
+        }
     }
 
 

@@ -45,6 +45,12 @@
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
+        <a class="nav-link " href="{{ route('testimoni') }}">
+          <i class="ri-calendar-2-line"></i>
+          <span>Testimoni</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
         <a class="nav-link " href="/media">
           <i class="ri-file-edit-fill"></i>
           <span>Media</span>

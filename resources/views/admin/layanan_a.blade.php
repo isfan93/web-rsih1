@@ -61,7 +61,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                    <form action="/layanan/update/{{ $lay->id }}" method="post">
+                                    <form action="/layanan/update/{{ $lay->id }}" method="post" enctype="multipart/form-data">
                                         {{ csrf_field() }}
                                         <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Nama Layanan</label>
@@ -69,7 +69,7 @@
                                         </div>
                                         <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Masukan Gambar</label>
-                                        <input type="file" class="form-control" id="recipient-name" name="gambar" value="{{ $lay->gambar }}">
+                                        <input type="file" class="form-control" id="recipient-name" name="gambar">
                                         </div>
                                     
                                     </div>

@@ -49,96 +49,72 @@
           <p>DIREKTUR DAN MANAJER</p>
         </div>
 
-        <div class="row">
-            <div class="col-lg-12 mt-4 mt-lg-0">
-                <div class="member d-flex justify-content-center align-items-start">
-                    <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-                    <div class="member-info">
-                    <h4>drg. Muhammad Hasan, MARS.</h4>
-                    <span>Direktur Rumah Sakit Intan Husada</span>
-                    {{-- <p>Explicabo voluptatem mollitia et repellat</p> --}}
-                    <div class="social">
-                        <a href=""><i class="ri-twitter-fill"></i></a>
-                        <a href=""><i class="ri-facebook-fill"></i></a>
-                        <a href=""><i class="ri-instagram-fill"></i></a>
-                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                    </div>
-                    </div>
-                </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-3 mt-2">
+            <div class="card">
+              <img src="img/manajemen/drg hasan.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold">
+                  drg. Muhammad Hasan, MARS.
+                </h5>
+                <p class="card-text">Direktur</p>
               </div>
+            </div>
+          </div>
         </div>
-        <br>
+
         <div class="row">
-            
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Aut maiores voluptates amet et quis</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+          <div class="col-3 mt-2">
+            <div class="card">
+              <img src="img/manajemen/wahyu.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold">
+                  Wahyu Suprayogo, SE, MM
+                </h5>
+                <p class="card-text">Manajer PKRS dan Keuangan</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Aut maiores voluptates amet et quis</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+          <div class="col-3 mt-2">
+            <div class="card">
+              <img src="img/manajemen/dr iva.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold">
+                  dr. Iva Tania
+                </h5>
+                <p class="card-text">Manajer Pelayanan Medis</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Quisquam facilis cum velit laborum corrupti</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+          <div class="col-3 mt-2">
+            <div class="card">
+              <img src="img/manajemen/depi.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold">
+                  Depi Rismayanti, S.Kep
+                </h5>
+                <p class="card-text">Manajer Keperawatan</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Dolorum tempora officiis odit laborum officiis</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+          <div class="col-3 mt-2">
+            <div class="card">
+              <img src="img/manajemen/maya.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold">
+                  Maya Anggraeni, S.Pd
+                </h5>
+                <p class="card-text">Manajer SDM dan Umum</p>
               </div>
             </div>
           </div>
-
+          
         </div>
+
+        
 
       </div>
     </section><!-- End Team Section -->

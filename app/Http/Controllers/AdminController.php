@@ -11,6 +11,8 @@ use App\Models\Layanan;
 use App\Models\Rekanan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Testimoni;
+use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
@@ -66,17 +68,33 @@ class AdminController extends Controller
 
     public function update_layanan($id, Request $req)
     {
-        $this->validate($req, [
-            'nama_layanan' => 'required',
-            'gambar' => 'required'
-        ]);
-
         $layanan = Layanan::find($id);
-        $layanan->nama_layanan = $req->nama_layanan;
-        $layanan->gambar = $req->gambar;
-        $layanan->save();
-        Alert::success('Data Berhasil di ubah');
-        return redirect('/layanan');
+        
+        if($req->file('gambar') == ""){
+            $layanan->update([
+                'nama_layanan' => $req->nama_layanan
+            ]);
+            Alert::success('Data Berhasil diubah');
+            return redirect('/layanan');
+        } else {
+            //hapus gambar lama
+            // Storage::disk('local')->delete('img/layanan/'.$layanan->gambar);
+
+            //upload gambar baru
+            $file = $req->file('gambar');
+            $nama_file = $file->getClientOriginalName();
+            $folder_tujuan = 'img/layanan';
+            $file->move($folder_tujuan, $nama_file);
+
+            $layanan->nama_layanan = $req->nama_layanan;
+            $layanan->gambar = $nama_file;
+            $layanan->save();
+            Alert::success('Data Berhasil di ubah');
+             return redirect('/layanan');
+        }
+
+        
+        // return redirect('/layanan');
     }
 
     public function dokter()
@@ -99,9 +117,8 @@ class AdminController extends Controller
         $this->validate($req, [
             'nama_dok' => 'required',
             'id' => 'required',
-            'ttl' => 'required',
-            'email' => 'required',
             'pendidikan' => 'required',
+            'pelatihan' => 'required',
             'keahlian' => 'required',
             'foto' => 'required|file|image|mimes:jpeg,png,jpg',
         ]);
@@ -115,6 +132,7 @@ class AdminController extends Controller
             'nama_dok' => $req->nama_dok,
             'poli_id' => $req->id,
             'pendidikan' => $req->pendidikan,
+            'pelatihan' => $req->pelatihan,
             'keahlian' => $req->keahlian,
             'foto' => $nama_file
         ]);
@@ -131,27 +149,28 @@ class AdminController extends Controller
 
     public function update_dokter($id, Request $req)
     {
-        // $this->validate($req, [
-        //     'nama_dok' => 'required',
-        //     // 'id' => 'required',
-        //     'ttl' => 'required',
-        //     'email' => 'required',
-        //     'pendidikan' => 'required',
-        //     'keahlian' => 'required',
-        //     'foto' => 'required'
-        // ]);
-
         $dok = Dokter::find($id);
-        $dok->nama_dok = $req->nama_dok;
-        // $dok->id = $req->id;
-        $dok->ttl = $req->ttl;
-        $dok->email = $req->email;
-        $dok->pendidikan = $req->pendidikan;
-        $dok->keahlian = $req->keahlian;
-        $dok->foto = $req->foto;
-        Alert::success('data berhasil di ubah');
-        $dok->save();
-        return redirect('/dokter');
+
+        if($req->file('foto') == ""){
+            $dok->update([
+                'nama_dok' => $req->nama_dok,
+                'pendidikan' => $req->pendidikan,
+                'pelatihan' => $req->pelatihan,
+                'keahlian' => $req->keahlian,
+            ]);
+            Alert::success('Data Berhasil di ubah');
+            return redirect('/dokter');
+        } else {
+            $file = $req->file('foto');
+            $nama_file = $file->getClientOriginalName();
+            $folder_tujuan = 'img/foto dokter';
+            $file->move($folder_tujuan, $nama_file);
+
+            $dok->foto = $nama_file;
+            $dok->save();
+            Alert::success('data berhasil di ubah');
+            return redirect('/dokter');
+        }
     }
 
     public function rekanan_all(Request $req)
@@ -197,17 +216,25 @@ class AdminController extends Controller
 
     public function update_rekanan($id, Request $req)
     {
-        $this->validate($req,[
-            'required' => 'nama_rekan',
-            // 'requiered' => 'logo'
-        ]);
-
         $rekanan = Rekanan::find($id);
-        $rekanan->nama_rekan = $req->nama_rekan;
-        $rekanan->logo = $req->logo;
-        Alert::success('Data Berhasil di Update');
-        $rekanan->save();
-        return redirect('/rekanan');
+        
+        if($req->file('logo') == ""){
+            $rekanan->update([
+                'nama_rekan' => $req->nama_rekan
+            ]);
+        }else{
+            $file = $req->file('logo');
+            $nama_file = $file->getClientOriginalName();
+            // $ext_gambar = $gambar->getClientOriginalExtension();
+            $folder_tujuan = 'img/rekanan';
+            $file->move($folder_tujuan,$nama_file);
+
+            $rekanan->nama_rekan = $req->nama_rekan;
+            $rekanan->logo = $nama_file;    
+            Alert::success('Data Berhasil di Update');
+            $rekanan->save();
+            return redirect('/rekanan');
+        }
     }
 
 
@@ -296,5 +323,65 @@ class AdminController extends Controller
 
         Alert::success('Data Berhasil Disimpan');
         return redirect('/media');
+    }
+
+    public function testi()
+    {
+        $testi = Testimoni::all();
+        return view('admin.testi', ['testi' => $testi]);
+    }
+
+    public function testi_tambah(Request $req) 
+    {
+        $this->validate($req, [
+            'nama' => 'required',
+            'foto' => 'required|file|image|mimes:jpeg,png,jpg',
+            'isi_testimoni' => 'required'
+        ]);
+
+        $file = $req->file('foto');
+        $name_foto = $file->getClientOriginalName();
+        $folder_tujuan = 'img/foto_testimoni';
+        $file->move($folder_tujuan,$name_foto);
+
+        Testimoni::create([
+            'nama' => $req->nama,
+            'foto' => $name_foto,
+            'isi_testimoni' => $req->isi_testimoni,
+        ]);
+        Alert::success('Data Berhasil disimpan');
+        return redirect('/testimoni');
+
+    }
+
+    public function testi_update($id, Request $req)
+    {
+        $testi = Testimoni::find($id);
+        if($req->file('foto') == "" ){
+            $testi->update([
+                'nama' => $req->nama,
+                'isi_testimoni' => $req->isi_testimoni,
+            ]);
+        }else {
+            $file = $req->file('foto');
+            $name_foto = $file->getClientOriginalName();
+            $folder_tujuan = 'img/foto_testimoni';
+            $file->move($folder_tujuan,$name_foto);
+
+            $testi->nama = $req->nama;
+            $testi->isi_testimoni = $req->isi_testimoni;
+            $testi->foto = $name_foto;
+    
+            Alert::success('Data Berhasil disimpan');
+            $testi->save();
+            return redirect('/testimoni');
+        }
+    }
+
+    public function hapus_testi($id)
+    {
+        $testi = Testimoni::find($id);
+        $testi->delete($id);
+        return redirect('/testimoni');
     }
 }

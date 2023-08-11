@@ -70,6 +70,43 @@
     </div>
   </section><!-- End Hero -->
 
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Testimonials</h2>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="row">
+        @foreach ($testi as $t)
+        <div class="col-lg-6 mt-2">
+          <div class="testimonial-item">
+            <img src="img/foto_testimoni/{{ $t->foto }}" class="testimonial-img" alt="">
+            <h3>{{ $t->nama }}</h3>
+            <p>{{ $t->created_at }}</p>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              {{ $t->isi_testimoni }}
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+         @endforeach
+      </div>
+      <br>
+      {{ $testi->links() }}
+    </div>
+  </section><!-- End Testimonials Section -->
+ 
+
+
   <section id="" class="">
     <div class="container">
       <div class="row">
@@ -79,7 +116,6 @@
         <div class="card" style="padding-top: 15px">
           <img class="card-img-top" src="img/layanan/UGD.jpg" alt="Card image cap"  style="width: 700px; height: 450px; margin: auto auto ">
           <div class="card-body text-center">
-            {{-- <h5 class="card-title">Ambulance Emergency</h5> --}}
             <h1 class="biodata" style="width: 570px; height: 50px; margin: auto auto; background-color: #e12233"><i class="ri-phone-fill"></i>(0262) 2800-900</h1>
           </div>
         </div>
@@ -170,7 +206,7 @@
                     <h3>Kelas 3</h3>
                   </div>
                   <div class="card-body">
-                    <img src="/img/rawat inap/kelas1.jpg" style="width: 100%; height: 100%;" alt="">
+                    <img src="/img/rawat inap/kelas3.jpg" style="width: 100%; height: 100%;" alt="">
                   </div>
                 </div>
               </div><!-- End Sales Card -->

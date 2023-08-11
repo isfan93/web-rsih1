@@ -8,6 +8,7 @@ use App\Http\Controllers\PoliController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DokterController;
+use App\Http\Controllers\TestimoniController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,8 +84,6 @@ Route::get('/blog_single', [BlogController::class, 'single_post1']);
 
 Route::get('/maintenance', [MainController::class, 'maintenance']);
 
-
-
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login-proses', [LoginController::class, 'login_proses'])->name('login-proses');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
@@ -118,6 +117,19 @@ Route::post('/jadwal/edit_jadwal/{id}',[AdminController::class, 'edtjadwal']);
 Route::get('/media', [AdminController::class, 'media_all'])->name('media-all');
 Route::post('/media/tambah', [AdminController::class, 'add_media'])->name('add-media');
 
+Route::get('/testimoni',[AdminController::class, 'testi'])->name('testimoni');
+Route::post('/testimoni/tambah', [AdminController::class, 'testi_tambah'])->name('testi-tambah');
+Route::post('/testimoni/update/{id}', [AdminController::class, 'testi_update'])->name('testi-update');
+Route::get('/testimoni/hapus/{id}',[AdminController::class, 'hapus_testi']);
+
+
 Route::get('/poli_a', [PoliController::class, 'all_poli']);
 Route::post('/poli_a/tambah',[PoliController::class, 'tambah_poli']);
 Route::get('/poli_a/hapus/{id}', [PoliController::class, 'hapus_poli'])->name('hapus-poli');
+Route::post('/poli_a/update/{id}',[PoliController::class, 'update_poli'])->name('update-poli');
+
+
+
+// Route::post('/')
+
+
