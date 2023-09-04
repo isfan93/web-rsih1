@@ -25,14 +25,23 @@
               <li><a href="/ugd">Unit Gawat Darurat</a></li>
               <li class="dropdown"><a href="/rajal-dokter"><span>Unit Rawat Jalan</span></a></li>
               <li class="dropdown"><a href="#"><span>Unit Rawat Inap</span> <i class="bi bi-chevron-right"></i></a>
+                @php
+                use App\Models\Ranap;
+                $no = 1;
+                $ranap = Ranap::all();
+                @endphp
+                
                 <ul>
-                  <li><a href="/vvip">VVIP</a></li>
+                  @foreach ($ranap as $ran)
+                <li><a href="{{ route('ranap', $ran->id) }}">{{ $ran->kelas }}</a></li>
+                  {{-- <li><a href="/vvip">VVIP</a></li>
                   <li><a href="/vip">VIP</a></li>
                   <li><a href="/utama">Utama</a></li>
                   <li><a href="/kelas1">Kelas 1</a></li>
                   <li><a href="/kelas2">Kelas 2</a></li>
                   <li><a href="/kelas3">Kelas 3</a></li>
-                  <li><a href="#">Isolasi</a></li>
+                  <li><a href="#">Isolasi</a></li> --}}
+                  @endforeach
                 </ul>
               </li> 
               <li class="dropdown"><a href="#"><span>Unit Intensif</span> <i class="bi bi-chevron-right"></i></a>
@@ -46,7 +55,7 @@
               <li class="dropdown"><a href="#"><span>Unit Penunjang</span><i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="/radiologi">Unit Radiologi</a></li>
-                  <li><a href="#">Unit Laboratorium</a></li>
+                  <li><a href="/laboratorium">Unit Laboratorium</a></li>
                   <li><a href="/farmasi">Unit Farmasi</a></li>
                   <li><a href="#">Unit Gizi</a></li>
                   <li><a href="#">Unit OK</a></li>

@@ -110,51 +110,6 @@
   </div>
 </section>
 
-
-{{-- 
-<section>
-  <div class="container">
-    <div class="row">
-    <h3>TRIASE UGD</h3>
-    <div class="card-group">
-      <div class="col">
-      <div class="card">
-        <img class="card-img-top" src="img/ambulance.jpg" alt="Card image cap">
-        <div class="card-body text-center">
-          <h5 class="card-title">Ambulance Emergency</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img class="card-img-top" src="img/igd.jpg" alt="Card image cap">
-        <div class="card-body text-center">
-          <h5 class="card-title">Instalasi IGD</h5>
-        </div>
-      </div>    
-    </div>    
-    <div class="col">
-      <div class="card">
-        <img class="card-img-top" src="img/igd.jpg" alt="Card image cap">
-        <div class="card-body text-center">
-          <h5 class="card-title">Instalasi IGD</h5>
-        </div>
-      </div>    
-    </div> 
-    <div class="col">
-      <div class="card">
-        <img class="card-img-top" src="img/igd.jpg" alt="Card image cap">
-        <div class="card-body text-center">
-          <h5 class="card-title">Instalasi IGD</h5>
-        </div>
-      </div>    
-    </div> 
-    
-    </div>
-  </div>
-  </div>
-</section> --}}
-
 <section id="team" class="team section-bg">
   <div class="container" data-aos="fade-up">
     <div class="section-title">
@@ -169,117 +124,17 @@
       $dokters = $doks;
     @endphp
     @foreach ($dokters as $dok)
-    <div class="col-lg-6 mt-4 mt-lg-0">
-      <br>
-      <div class="member d-flex align-items-start">
-        <div class="pic"><img src="/img/foto dokter/{{ $dok->foto }}" class="img-fluid" alt=""></div>
-        <div class="member-info">
-          {{-- <p class="biodata">Biodata</p> --}}
-          <div class="datap">
-          <h4>{{ $dok->nama_dok }}</h4>
-          <h5>{{ $dok->keahlian }}</h5>
-          <div>
-            <a href="/dokter_profile/{{ $dok->id }}" class="btn btn-sm btn-primary mt-5">Detail Dokter</a>
-           </div>
-        </div>
+    <div class="col-3 mt-2">
+      <div class="card h-100">
+        <img src="img/foto dokter/{{ $dok->foto }}" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold">{{ $dok->nama_dok }}</h5>
+          <p class="card-text">{{ $dok->keahlian }}</p>
+          <a href="/dokter_profile/{{ $dok->id }}" class="btn btn-sm btn-success" style="margin: auto auto">Lihat Profil</a>
         </div>
       </div>
     </div>
-
-
-      {{-- modal Detail Dokter --}}
-      <div class="modal fade" id="detaildok_b{{ $dok->id }}" data-bs-backdrop="poli1" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            {{-- <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">{{ $d->nama_dok }}</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div> --}}
-            <div class="modal-body">
-                <div class="row">
-                <div class="col">
-                    <img class="mx-auto d-block" src="/img/foto dokter/{{ $dok->foto }}" style="border-radius: 5px" width="60%" alt="">
-                    <div class="biodok">
-                        <h2>{{ $dok->nama_dok }}</h2>
-                        <h3>{{ $dok->keahlian }}</h3>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-6">
-                            <ul>
-                                <li>{{ $dok->ttl }}</li>
-                                <li>{{ $dok->pendidikan }}</li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <ul>
-                                <li>{{ $dok->email }}</li>
-                                <li>4</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                </div>
-                </div>
-                <br>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-            {{-- <button type="button" class="btn btn-primary">Understood</button> --}}
-            </div>
-        </div>
-        </div>
-    </div>
-    {{-- endmodal --}}
-
     @endforeach
-
-{{-- 
-      <div class="col-lg-6 mt-4 mt-lg-0">
-        <div class="member d-flex align-items-start">
-          <div class="pic"><img src="/img/foto dokter/Adhitya Purnama Putra.png" class="img-fluid" alt=""></div>
-          <div class="member-info">
-            <p class="biodata">Biodata</p>
-            <div class="datap">
-            <h4>dr. Adhitya Purnama Putra</h4>
-            <h5>Dokter Umum</h5>
-            <div class="data">
-            <p>Tempat Tanggal Lahir : Garut, 1 Oktober 1990</p>
-            <p>Email : dhit_fkup08@gmail.com</p>
-            </div>
-            <div class="social text-center">
-              <a href=""><i class="ri-twitter-fill"></i></a>
-              <a href=""><i class="ri-facebook-fill"></i></a>
-              <a href=""><i class="ri-instagram-fill"></i></a>
-              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 mt-4 mt-lg-0">
-        <div class="member d-flex align-items-start">
-          <div class="pic"><img src="/img/foto dokter/Adhitya Purnama Putra.png" class="img-fluid" alt=""></div>
-          <div class="member-info">
-            <p class="biodata">Biodata</p>
-            <div class="datap">
-            <h4>dr. Adhitya Purnama Putra</h4>
-            <h5>Dokter Umum</h5>
-            <div class="data">
-            <p>Tempat Tanggal Lahir : Garut, 1 Oktober 1990</p>
-            <p>Email : dhit_fkup08@gmail.com</p>
-            </div>
-            <div class="social text-center">
-              <a href=""><i class="ri-twitter-fill"></i></a>
-              <a href=""><i class="ri-facebook-fill"></i></a>
-              <a href=""><i class="ri-instagram-fill"></i></a>
-              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div> --}}
 
     </div>
     </div>

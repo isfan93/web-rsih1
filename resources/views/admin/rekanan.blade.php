@@ -121,7 +121,7 @@
     </div>
 </section>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
 <script>
     $('.delete').click(function(){
         var rekanid = $(this).attr('data-id');

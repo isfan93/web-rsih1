@@ -107,9 +107,19 @@ class MainController extends Controller
         return view('penunjang');
     }
 
+    public function penunjang_view()
+    {
+        return view('penunjang.penunjang_view');
+    }
+
     public function rad()
     {
         return view('penunjang.rad');
+    }
+
+    public function lab()
+    {
+        return view('penunjang.lab');
     }
 
     public function farmasi()

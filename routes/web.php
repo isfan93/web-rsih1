@@ -1,12 +1,15 @@
 <?php
 
 use Faker\Guesser\Name;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\GiziController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PoliController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RanapController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\TestimoniController;
 
@@ -53,16 +56,19 @@ Route::get('/rajal', [MainController::class, 'tampil_a']);
 Route::get('/rajal-dokter', [MainController::class, 'dokter']);
 // Route::get('/rajal-dokter', [MainController::class, 'dokter_all']);
 
-Route::get('/vvip', [MainController::class, 'vvip']);
-Route::get('/vip', [MainController::class, 'vip']);
+Route::get('/kelas/{id}', [RanapController::class,'all_ranap'])->name('ranap');
+
+Route::get('/1', [MainController::class, 'vvip']);
+Route::get('/2', [MainController::class, 'vip']);
 Route::get('/kelas1', [MainController::class, 'kelas1']);
 Route::get('/kelas2', [MainController::class, 'kelas2']);
 Route::get('/kelas3', [MainController::class, 'kelas3']);
 Route::get('/utama', [MainController::class, 'utama']);
-Route::get('/hcu_icu', [MainController::class, 'hcu_icu']);
+Route::get('/isolasi', [MainController::class, 'hcu_icu']);
 
 
 Route::get('/radiologi', [MainController::class, 'rad']);
+Route::get('/laboratorium', [MainController::class, 'lab']);
 Route::get('/farmasi', [MainController::class, 'farmasi']);
 
 Route::get('/hcu',[MainController::class, 'hcu']);
@@ -128,7 +134,9 @@ Route::post('/poli_a/tambah',[PoliController::class, 'tambah_poli']);
 Route::get('/poli_a/hapus/{id}', [PoliController::class, 'hapus_poli'])->name('hapus-poli');
 Route::post('/poli_a/update/{id}',[PoliController::class, 'update_poli'])->name('update-poli');
 
+Route::get('/penunjang/detail', [MainController::class, 'penunjang_view'])->name('p-view');
 
+Route::get('/gizi', [GiziController::class, 'all_menu'])->name('menu');
 
 // Route::post('/')
 
