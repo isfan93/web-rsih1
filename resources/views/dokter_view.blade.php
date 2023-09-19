@@ -20,7 +20,8 @@
 
     <div class="row">
       @foreach ($dokter as $dok)
-      <div class="col-3 mt-2">
+
+      <div class="col-lg-3 col-md-6 portfolio-item filter-app mt-2">  
         <div class="card h-100">
           <img src="img/foto dokter/{{ $dok->foto }}" class="card-img-top" alt="...">
           <div class="card-body text-center">
@@ -34,6 +35,8 @@
     </div>
   </div>
 </section><!-- End Biodata -->
+
+
 
 
 @endsection

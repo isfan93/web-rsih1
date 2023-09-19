@@ -42,6 +42,8 @@
 <body>
   @include('layouts.header')
 
+
+
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
       <div class="section-title" style="margin-top: 100px">
@@ -54,7 +56,9 @@
   @yield('content')
 
   {{-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> --}}
-  <a href="https://ihospital.rsintanhusada.com/index.php?r=sistemInformasiEksekutif/ketersediaanKamar/index&modulId=39" class="button button2 back-to-top d-flex align-items-center justify-content-center" title="Informasi Kamar"><img class="center" src="\img/ketersediaanbed.png"></i></a>
+  <a href="https://ihospital.rsintanhusada.com/index.php?r=sistemInformasiEksekutif/ketersediaanKamar/index&modulId=39" class="button button2 back-to-top d-flex align-items-center justify-content-center" title="Informasi Kamar"><img class="center flash-button" src="\img/ketersediaanbed.png"></i></a>
+  
+
 
   <a href="https://wa.me/6281214867272?text=Nama%20%3A%0AAlamat%20%3A%0ANo%20Hp%20%3A%0APesan%20%3A%0A" class="button3 button4 back-to-top d-flex align-items-center justify-content-center" title="Hubungi Kami"><img class="center2" src="\img/wa.png"></i></a>
 
@@ -93,7 +97,7 @@
 
   <!-- Template Main JS File -->
   <script src="\assets/js/main.js"></script>
-  <script src="\assets/js/main2.js"></script>
+  {{-- <script src="\assets/js/main2.js"></script> --}}
 
 </body>
 

@@ -23,7 +23,7 @@
           <li class="dropdown"><a href="#"><span>Jenis Pelayanan</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/ugd">Unit Gawat Darurat</a></li>
-              <li class="dropdown"><a href="/rajal-dokter"><span>Unit Rawat Jalan</span></a></li>
+              <li><a href="/rajal-dokter">Unit Rawat Jalan</a></li>
               <li class="dropdown"><a href="#"><span>Unit Rawat Inap</span> <i class="bi bi-chevron-right"></i></a>
                 @php
                 use App\Models\Ranap;
@@ -46,7 +46,7 @@
               </li> 
               <li class="dropdown"><a href="#"><span>Unit Intensif</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="/hcu">HCU</a></li>
+                  <li><a href="/maintenance" disabled>HCU</a></li>
                   <li><a href="/icu">ICU</a></li>
                   <li><a href="/picu">PICU</a></li>
                   <li><a href="/isolasi">Isolasi</a></li>

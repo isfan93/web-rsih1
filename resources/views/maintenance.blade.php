@@ -23,7 +23,6 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
 	<div class="carousel-item active" style="background-image: url(img/home/slide1.jpg); background-size: cover">
 	<div class=" size1 flex-w flex-col-c-sb p-l-15 p-r-15 p-b-30">
 		
@@ -31,7 +30,7 @@
 		<div class="img" style="margin-top: 50px">
 			<img src="img/loggweb.png" alt=""  style="width: 180px; height: 180px;">
 		</div>
-
+		<a href="/"><button class="btn btn-primary btn-sm mt-5">Kembali ke Home</button></a>
 		<div class="flex-col-c w-full p-t-50 p-b-80" >
 			<h3 class="l1-txt1 txt-center p-b-10" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
 				Under Maintenance

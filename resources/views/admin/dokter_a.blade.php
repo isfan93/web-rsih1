@@ -95,7 +95,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Pelatihan</label>
-                                        <input type="text" class="form-control" id="recipient-name" name="pendidikan" value="{{ $dok->pelatihan }}">
+                                        <input type="text" class="form-control" id="recipient-name" name="pelatihan" value="{{ $dok->pelatihan }}">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Keahlian</label>

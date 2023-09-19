@@ -9,7 +9,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(img/home/slide1.jpg)">
+        <div class="carousel-item active img-bck" style="background-image: url(img/home/slide1.jpg)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Selamat Datang di Website Official<br><span>Rumah Sakit Intan Husada Garut</span></h2>
@@ -23,7 +23,7 @@
 
       
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(img/home/slide2.jpg)">
+        <div class="carousel-item img-bck" style="background-image: url(img/home/slide2.jpg)">
           <div class="carousel-container">
             <div class="container">
             </div>
@@ -31,28 +31,28 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(img/home/slide3.jpg)">
+        <div class="carousel-item img-bck" style="background-image: url(img/home/slide3.jpg)">
           <div class="carousel-container">
             <div class="container">
             </div>
           </div>
         </div>
 
-        <div class="carousel-item" style="background-image: url(img/home/slide4.jpg)">
+        <div class="carousel-item img-bck" style="background-image: url(img/home/slide4.jpg)">
           <div class="carousel-container">
             <div class="container">
             </div>
           </div>
         </div>
 
-        <div class="carousel-item" style="background-image: url(img/home/slide5.jpg)">
+        <div class="carousel-item img-bck" style="background-image: url(img/home/slide5.jpg)">
           <div class="carousel-container">
             <div class="container">
             </div>
           </div>
         </div>
 
-        <div class="carousel-item" style="background-image: url(img/home/slide6.jpg)">
+        <div class="carousel-item img-bck" style="background-image: url(img/home/slide6.jpg)">
           <div class="carousel-container">
             <div class="container">
             </div>

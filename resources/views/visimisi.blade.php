@@ -50,73 +50,62 @@
         </div>
 
         <div class="row d-flex justify-content-center">
-          <div class="col-3 mt-2">
-            <div class="card">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app mt-2">  
+            <div class="card h-100">
               <img src="img/manajemen/drg hasan.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="card-title fw-bold">
-                  drg. Muhammad Hasan, MARS.
-                </h5>
+                <h5 class="card-title fw-bold">drg. Muhammad Hasan, MARS</h5>
                 <p class="card-text">Direktur</p>
+              </div>
               </div>
             </div>
           </div>
-        </div>
+        
 
         <div class="row">
-          <div class="col-3 mt-2">
-            <div class="card">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app mt-2">  
+            <div class="card h-100">
               <img src="img/manajemen/wahyu.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="card-title fw-bold">
-                  Wahyu Suprayogo, SE, MM
-                </h5>
+                <h5 class="card-title fw-bold">Wahyu Suprayogo, SE, MM</h5>
                 <p class="card-text">Manajer PKRS dan Keuangan</p>
               </div>
             </div>
           </div>
 
-          <div class="col-3 mt-2">
-            <div class="card">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app mt-2">  
+            <div class="card h-100">
               <img src="img/manajemen/dr iva.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="card-title fw-bold">
-                  dr. Iva Tania
-                </h5>
+                <h5 class="card-title fw-bold">dr. Iva Tania</h5>
                 <p class="card-text">Manajer Pelayanan Medis</p>
               </div>
             </div>
           </div>
 
-          <div class="col-3 mt-2">
-            <div class="card">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app mt-2">  
+            <div class="card h-100">
               <img src="img/manajemen/depi.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="card-title fw-bold">
-                  Depi Rismayanti, S.Kep
-                </h5>
+                <h5 class="card-title fw-bold">Depi Rismayanti, S.Kep</h5>
                 <p class="card-text">Manajer Keperawatan</p>
               </div>
             </div>
           </div>
 
-          <div class="col-3 mt-2">
-            <div class="card">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app mt-2">  
+            <div class="card h-100">
               <img src="img/manajemen/maya.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="card-title fw-bold">
-                  Maya Anggraeni, S.Pd
-                </h5>
+                <h5 class="card-title fw-bold">Maya Anggraeni, S.Pd</h5>
                 <p class="card-text">Manajer SDM dan Umum</p>
               </div>
             </div>
           </div>
-          
         </div>
 
-        
-
       </div>
+    </div>
     </section><!-- End Team Section -->
 
     <!-- ======= Our Skills Section ======= -->

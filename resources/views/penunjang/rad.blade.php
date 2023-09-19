@@ -35,7 +35,7 @@
       </div>
       <br>
 
-      <div class="row portfolio-container">
+      <div class="row portfolio-container mb-5">
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <a href=""><div class="portfolio-wrap">

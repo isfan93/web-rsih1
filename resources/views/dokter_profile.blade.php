@@ -3,25 +3,27 @@
 @section('title','PROFILE DOKTER')
 @section('judul','Profile Dokter')
 
+
 <section id="about" class="about">
   <div class="container">
-    <div class="row">
-        <div class="col-4">
-            <img src="/img/foto dokter/{{ $dokprof->foto }}" alt="..." style="width: 400px; height: 400px;">
-        </div>
-        <div class="col-8">
-          <h1 class="fw-bold">{{ $dokprof->nama_dok }}</h1>
-          <h4>{{ $dokprof->keahlian }}</h4>
-          <hr>
-          <h3 class="fw-bold">Pendidikan</h3>
-          <p>{{ $dokprof->pendidikan }}</p>
-          <h3 class="fw-bold">Seminar dan Workshop</h3>
-          <p>{{ $dokprof->pelatihan }}</p>
-        </div>
-    </div>
-  </div>
-</section><!-- End Biodata -->
 
+    <div class="row content">
+      <div class="col-lg-4">
+        <img src="/img/foto dokter/{{ $dokprof->foto }}" alt="..." style="width: 400px; height: 400px;">
+      </div>
+      <div class="col-lg-8 pt-4 pt-lg-0">
+        <h1 class="fw-bold">{{ $dokprof->nama_dok }}</h1>
+        <h4>{{ $dokprof->keahlian }}</h4>
+        <hr>
+        <h3 class="fw-bold">Pendidikan</h3>
+        <p>{{ $dokprof->pendidikan }}</p>
+        <h3 class="fw-bold">Seminar dan Workshop</h3>
+        <p>{{ $dokprof->pelatihan }}</p>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Section -->
 
 @php
 use App\Models\Dokter;

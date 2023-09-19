@@ -19,21 +19,22 @@
       $rek = $rekanan;
     @endphp
     @foreach ($rek as $r)
-        
-    <div class="col-lg-2">
+    
+    <div class="col-lg-2 col-md-6 portfolio-item filter-app mt-2">  
+      <div class="card h-100" style="height: 200px; width:200px; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; ">
+        <div class="card-body">
+          <div class=""><img src="/img/rekanan/{{ $r->logo }}" class="img-fluid" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    {{-- <div class="col-lg-2">
       <div class="card text-center mb-3" style="height: 200px; width:200px; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; ">
         <div class="card-body">
           <div class=""><img src="/img/rekanan/{{ $r->logo }}" class="img-fluid" alt=""></div>
         </div>
-        {{-- <h5 class="card-title">{{ $r->nama_rekan }}</h5> --}}
       </div>
-
-
-{{-- 
-      <div class="member d-flex align-items-start">
-        <div class=""><img src="/img/rekanan/{{ $r->logo }}" class="img-fluid" alt=""></div>
-      </div> --}}
-    </div>
+    </div> --}}
     @endforeach
     
   </div>

@@ -8,8 +8,13 @@
     <img src="\img/rawat inap/{{ $ranap->gambar }}" alt="" style="width: 100%; height: 100%">
 </div>
 <div class="text-center">
-    <a href="\video/{{ $ranap->video }}" class="btn btn-sm btn-success glightbox  biodata mt-2 text-center" 
-style="width: 20%">Lihat Video >> Klik disni !!</a>
+  <div class="container">
+      <div class="row d-flex justify-content-center mt-2">
+        <div class="col-6 col-md-6">
+          <a href="\video/{{ $ranap->video }}" class="btn btn-sm btn-primary biodata" style="margin: auto auto">Lihat Video >> Klik disni !!</a>
+        </div>
+      </div>
+    </div>
 </div>
 <div class="container">
   <div class="row mt-3 text-center">
@@ -46,22 +51,23 @@ style="width: 20%">Lihat Video >> Klik disni !!</a>
     </div>
   </div>
 
-  
 
   <div class="row mt-3 mb-2">
     <h3 class="biodata px-2">Layanan Kamar Lainnya</h3>
     @foreach ($ranap_lay as $rl)
-    <div class="col-3 mt-2">
-        <div class="card h-100">
-          <img src="\img/rawat inap/{{ $rl->gambar2 }}" class="card-img-top" alt="...">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">{{ $rl->kelas }}</h5>
-            <p class="card-text"></p>
-            <a href="{{ route('ranap', $rl->id) }}" class="btn btn-sm btn-danger biodata" style="margin: auto auto">Lihat Kelas</a>
+      <div class="col-lg-3 col-md-6">
+        <div class="box">
+          <div class="card h-100 ">
+            <img src="\img/rawat inap/{{ $rl->gambar2 }}" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">{{ $rl->kelas }}</h5>
+              <p class="card-text"></p>
+              <a href="{{ route('ranap', $rl->id) }}" class="btn btn-sm btn-danger biodata" style="margin: auto auto">Lihat Kelas</a>
+            </div>
           </div>
         </div>
       </div>
-    @endforeach
+      @endforeach
 
   </div>
 
