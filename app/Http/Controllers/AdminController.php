@@ -114,14 +114,14 @@ class AdminController extends Controller
 
     public function add_dokter(Request $req)
     {
-        $this->validate($req, [
-            'nama_dok' => 'required',
-            'id' => 'required',
-            'pendidikan' => 'required',
-            'pelatihan' => 'required',
-            'keahlian' => 'required',
-            'foto' => 'required|file|image|mimes:jpeg,png,jpg',
-        ]);
+        // $this->validate($req, [
+        //     'nama_dok' => 'required',
+        //     'id' => 'required',
+        //     'pendidikan' => 'required',
+        //     'pelatihan' => 'required',
+        //     'keahlian' => 'required',
+        //     'foto' => 'required|file|image|mimes:jpeg,png,jpg',
+        // ]);
 
         $file = $req->file('foto');
         $nama_file = $file->getClientOriginalName();

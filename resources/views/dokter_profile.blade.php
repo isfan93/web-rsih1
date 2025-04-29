@@ -8,10 +8,10 @@
   <div class="container">
 
     <div class="row content">
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6">
         <img src="/img/foto dokter/{{ $dokprof->foto }}" alt="..." style="width: 400px; height: 400px;">
       </div>
-      <div class="col-lg-8 pt-4 pt-lg-0">
+      <div class="col-lg-8 pt-4 pt-lg-0 col-md-6">
         <h1 class="fw-bold">{{ $dokprof->nama_dok }}</h1>
         <h4>{{ $dokprof->keahlian }}</h4>
         <hr>

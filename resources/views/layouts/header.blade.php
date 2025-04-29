@@ -46,7 +46,7 @@
               </li> 
               <li class="dropdown"><a href="#"><span>Unit Intensif</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="/maintenance" disabled>HCU</a></li>
+                  <li><a href="/hcu" disabled>HCU</a></li>
                   <li><a href="/icu">ICU</a></li>
                   <li><a href="/picu">PICU</a></li>
                   <li><a href="/isolasi">Isolasi</a></li>
@@ -57,9 +57,8 @@
                   <li><a href="/radiologi">Unit Radiologi</a></li>
                   <li><a href="/laboratorium">Unit Laboratorium</a></li>
                   <li><a href="/farmasi">Unit Farmasi</a></li>
-                  <li><a href="#">Unit Gizi</a></li>
-                  <li><a href="#">Unit OK</a></li>
-                  <li><a href="#">Unit VK</a></li>
+                  <li><a href="/ok">Unit OK</a></li>
+                  <li><a href="/vk">Unit VK</a></li>
                 </ul>
               </li>
               <li><a href="/gizi">Unit Gizi</a></li>
@@ -68,7 +67,8 @@
             </ul>
           </li>
           <li class="dropdown"><a href="/fasilitas_umum"><span>Fasilitas Umum</span></a></li>
-          <li><a href="/blog">Media dan Karir</a></li>
+          <li><a href="/media">Media</a></li>
+          <li><a href="/karir">Karir</a></li>
           <li><a href="/kontak">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

@@ -33,7 +33,7 @@
               <div class="info-item  d-flex flex-column justify-content-center align-items-center">
                 <i class="bi bi-telephone"></i>
                 <h3>No Telepon</h3>
-                <p>0882232131</p>
+                <p>+6281214867272</p>
                 <a href="https://wa.me/6289628860332?text=Nama%20%3A%0AAlamat%20%3A%0ANo%20Hp%20%3A%0APesan%20%3A%0A">Chat Whatsapp</a>
               </div>
             </div><!-- End Info Item -->

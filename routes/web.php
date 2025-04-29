@@ -70,6 +70,10 @@ Route::get('/isolasi', [MainController::class, 'hcu_icu']);
 Route::get('/radiologi', [MainController::class, 'rad']);
 Route::get('/laboratorium', [MainController::class, 'lab']);
 Route::get('/farmasi', [MainController::class, 'farmasi']);
+Route::get('/farmasi_detail1', [MainController::class, 'farmasi_d1']);
+Route::get('/farmasi_detail4', [MainController::class, 'farmasi_d4']);
+Route::get('/farmasi_detail2', [MainController::class, 'farmasi_d2']);
+Route::get('/farmasi_detail3', [MainController::class, 'farmasi_d3']);
 
 Route::get('/hcu',[MainController::class, 'hcu']);
 Route::get('/icu',[MainController::class, 'icu']);
@@ -85,7 +89,7 @@ Route::get('/dokter_profile/{id}', [DokterController::class, 'dokter_profile']);
 // blog routes
 Route::get('/blog', [BlogController::class, 'all_post']);
 // Route::get('/blog_single/{id}', [BlogController::class, 'single_post']);
-Route::get('/blog_single/{id}',[BlogController::class, 'single_post']);
+Route::get('/blog_single/detail',[BlogController::class, 'single_post']);
 Route::get('/blog_single', [BlogController::class, 'single_post1']);
 
 Route::get('/maintenance', [MainController::class, 'maintenance']);
@@ -134,10 +138,25 @@ Route::post('/poli_a/tambah',[PoliController::class, 'tambah_poli']);
 Route::get('/poli_a/hapus/{id}', [PoliController::class, 'hapus_poli'])->name('hapus-poli');
 Route::post('/poli_a/update/{id}',[PoliController::class, 'update_poli'])->name('update-poli');
 
-Route::get('/penunjang/detail', [MainController::class, 'penunjang_view'])->name('p-view');
+Route::get('/penunjang_detail/{id}', [MainController::class, 'penunjang_view'])->name('p-view');
+Route::get('/rad_detail/{id}', [MainController::class, 'rad_detail']);
+Route::get('/rad_detail1', [MainController::class, 'rad_detail1']);
+Route::get('/rad_detail2', [MainController::class, 'rad_detail2']);
+Route::get('/rad_detail3', [MainController::class, 'rad_detail3']);
+Route::get('/rad_detail4', [MainController::class, 'rad_detail4']);
+Route::get('/ok', [MainController::class, 'unit_OK']);
+Route::get('/vk', [MainController::class, 'unit_VK']);
+
 
 Route::get('/gizi', [GiziController::class, 'all_menu'])->name('menu');
+Route::get('/giziproduksi', [GiziController::class, 'gzProduksi'])->name('gizi-produksi');
+
+Route::get('/media', [BlogController::class, 'media']);
+Route::get('/media_single/{id}', [BlogController::class, 'media_single']);
+Route::get('/karir', [BlogController::class, 'karir']);
+
+Route::get('/fasilitas_umum/detail/ifood', [MainController::class, 'Ifood']);
+Route::get('/fasilitas_umum/detail/parkir', [MainController::class, 'parkir']);
+Route::get('/fasilitas_umum/detail/mushola', [MainController::class, 'mushola']);
 
 // Route::post('/')
-
-

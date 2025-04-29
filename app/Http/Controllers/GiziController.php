@@ -13,4 +13,8 @@ class GiziController extends Controller
         $all_menu = Gizi::all();
         return view('gizi', ['gizi' => $all_menu]);
     }
+
+    public function gzProduksi(){
+        return view('gizi_produksi');
+    }
 }

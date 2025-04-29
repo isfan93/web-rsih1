@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ctscan;
+use App\Models\MCU;
 use App\Models\Poli;
 use App\Models\Dokter;
 use App\Models\JadwalA;
 use App\Models\JadwalB;
 use App\Models\Layanan;
+use App\Models\Penunjang;
 use App\Models\Testimoni;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -107,19 +110,37 @@ class MainController extends Controller
         return view('penunjang');
     }
 
-    public function penunjang_view()
+    public function penunjang_view($id, Request $req)
     {
-        return view('penunjang.penunjang_view');
+        $penunjang = Penunjang::find($id);
+        $datalayanan = Penunjang::find($id)->p1;
+        $layanan = explode(';', $datalayanan);
+        return view('penunjang.penunjang_view', compact('penunjang','layanan'));
+
     }
 
     public function rad()
     {
-        return view('penunjang.rad');
+        $rad = Penunjang::where('penunjang','=','rad')->get();
+        return view('penunjang.rad', compact('rad'));
+    }
+
+    public function rad_detail($id)
+    {
+        $raddetail = Penunjang::find($id);
+        $keterangan = Penunjang::find($id)->p1;
+        $ket = explode(';', $keterangan);
+
+        $no=1;
+        $ctsc = Ctscan::all();
+
+        return view('penunjang.radiologi_view', compact('no','ctsc','ket','raddetail'));
     }
 
     public function lab()
     {
-        return view('penunjang.lab');
+        $lab = Penunjang::where('penunjang','=','lab')->get();
+        return view('penunjang.lab', ['lab' => $lab]);
     }
 
     public function farmasi()
@@ -142,6 +163,18 @@ class MainController extends Controller
         return view('fasilitas_u');
     }
 
+    public function IFood(){
+        return view('fasilitas_u_detail1');
+    }
+
+    public function parkir(){
+        return view('fasilitas_u_detail2');
+    }
+
+    public function mushola(){
+        return view('fasilitas_u_detail3');
+    }
+
     public function tarif_p()
     {
         return view('tarif_penunjang');
@@ -159,7 +192,9 @@ class MainController extends Controller
 
     public function mcu()
     {
-        return view('mcu');
+        $no = 1;
+        $mcu = MCU::all();
+        return view('mcu', compact('no','mcu'));
     }
 
     public function pelpro()
@@ -219,7 +254,58 @@ class MainController extends Controller
     public function poli($id)
     {
         $poli = Poli::find($id);
-        return view('poli', ['poli' => $poli]);
+        $data_kondisi = Poli::find($id)->kondisi;
+        $kondisi = explode(';', $data_kondisi);
+        // dd($kondisi);
+        return view('poli', compact('poli','kondisi'));
+    }
+
+    
+
+    public function rad_detail2()
+    {
+        $no=1;
+        $ctsc = Ctscan::all();
+        return view('penunjang.radiologi_view2', compact('no','ctsc'));
+    }
+
+    public function rad_detail1()
+    {
+        return view('penunjang.radiologi_view1');
+    }
+
+    public function rad_detail3()
+    {
+        return view('penunjang.radiologi_view3');
+    }
+
+    public function rad_detail4()
+    {
+        return view('penunjang.radiologi_view4');
+    }
+
+    public function farmasi_d1(){
+        return view('penunjang.farmasi_view1');
+    }
+
+    public function farmasi_d4(){
+        return view('penunjang.farmasi_view4');
+    }
+
+    public function farmasi_d2(){
+        return view('penunjang.farmasi_view2');
+    }
+
+    public function farmasi_d3(){
+        return view('penunjang.farmasi_view3');
+    }
+
+    public function unit_OK(){
+        return view('penunjang.kamar_ok');
+    }
+
+    public function unit_VK(){
+        return view('penunjang.kamar_vk');
     }
 
 }

@@ -8,7 +8,7 @@
   
       <div class="row content">
         <div class="col-lg-6">
-          <img src="img/rawat inap/vvip.jpg" alt="" style="width: 100%">
+          <img src="img/rawat inap/icu_2.jpg" alt="" style="width: 100%">
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0">
             <h4 class="title-modal">Intensif Care Unit</h4>
@@ -23,92 +23,6 @@
   </section>
 
   
-  <!-- ======= Portfolio Section ======= -->
-  <section id="layanan" class="portfolio">
-    <div class="container">
-      <div class="row portfolio-container">
-
-        {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <video controls width="400" height="300">
-            <source src="video/video1.mp4" type="video/mp4">
-          </video>
-        </div> --}}
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <a href="img/rawat inap/vvip.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><img src="img/rawat inap/vvip.jpg" class="img-fluid" alt=""></a>
-            <a href="img/rawat inap/vvip.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-            <div class="portfolio-info">
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <a href="img/rawat inap/vvip.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><img src="img/rawat inap/vvip.jpg" class="img-fluid" alt=""></a>
-            <a href="img/rawat inap/vvip.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-            <div class="portfolio-info">
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <a href="img/rawat inap/vvip.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><img src="img/rawat inap/vvip.jpg" class="img-fluid" alt=""></a>
-            <a href="img/rawat inap/vvip.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-            <div class="portfolio-info">
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-  </section><!-- End Portfolio Section -->
-
-  <!-- ======= Portfolio Section ======= -->
-  {{-- <section id="layanan" class="portfolio">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <h1>Fasilitas</h1>
-        </div>
-      </div>
-      <br>
-
-      <div class="row portfolio-container">
-
-        <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="img/rawat inap/vvip.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>High Care Unit</h4>
-            </div>
-          </div>
-          <br>
-          <button class="btn btn-primary btn-small" style="background-color: rgb(43, 185, 138)"><a style="color: white" href="" data-bs-toggle="modal" data-bs-target="#fasilitas1">Lihat Detail</a></button>
-        </div>
-
-        <div class="col-lg-6 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="img/rawat inap/vvip.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Intensive Care Unit</h4>
-              </div>
-            </div>
-          <br>
-          <button class="btn btn-small" style="background-color: rgb(43, 185, 138)"><a style="color: white" href="" data-bs-toggle="modal" data-bs-target="#fasilitas2">Lihat Detail</a></button>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Portfolio Section --> --}}
-
-
   {{-- Modal Fasilitas --}}
   <div class="modal modal-xl fade" id="fasilitas1" data-bs-backdrop="poli1" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">

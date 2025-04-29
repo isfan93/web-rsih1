@@ -24,7 +24,10 @@
           </p>
           <hr>
           <p>
-
+            <h4 class="fw-bold text-center">Nomor Telfon IGD RSIH</h4>
+            <div class="card-body text-center">
+              <h1 class="biodata" style="width: 570px; height: 50px; margin: auto auto; background-color: #e12233"><i class="ri-phone-fill"></i>(0262) 2800-900</h1>
+            </div>
           </p>
         
       </div>

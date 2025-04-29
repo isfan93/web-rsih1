@@ -6,8 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>RSIH | @yield('title')</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Rumah Sakit Intan Husada Garut" name="description">
+  <meta content="RSIH" name="keywords">
 
   <!-- Favicons -->
   <link href="\img/rsih-logo-bulat.png" rel="icon">

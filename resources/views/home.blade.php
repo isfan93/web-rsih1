@@ -246,16 +246,17 @@
         @foreach ($layanan as $lay)
         
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <a href="img/layanan/{{ $lay->gambar }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Penghargaan 1">
             <div class="portfolio-wrap">
             <img src="img/layanan/{{ $lay->gambar }}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>{{ $lay->nama_layanan }}</h4>
             </div>
-          </div></a>
+          </div>
         </div>
          @endforeach
      </div>
+
+     
 
     </div>
   </section><!-- End Portfolio Section -->

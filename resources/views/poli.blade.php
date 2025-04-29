@@ -10,9 +10,13 @@
       </div>
       <div class="col-lg-6">
         <h1 class="fw-bold">{{ $poli->nama_poli }}</h1>
-        <h5>{{ $poli->keterangan }}</h5>
-        <h5>Kondisi yang dapat di tangani {{ $poli->nama_poli }}, diantaranya : </h5>
-        <p>{{ $poli->kondisi }}</p>
+        <p>{{ $poli->keterangan }}</p>
+        <p>Kondisi yang dapat di tangani {{ $poli->nama_poli }}, diantaranya : </p>
+        <ul>
+          @foreach ($kondisi as $k)
+          <li>{{ $k }}</li>
+          @endforeach
+        </ul>
         {{-- <ul>
           <li>{{ $poli->p1 }}</li>
           <li>{{ $poli->p2 }}</li>
@@ -35,7 +39,7 @@
 <div class="row">
   @foreach($dokter as $dok)
     
-  <div class="col-3 mt-2">
+  <div class="col-lg-3 col-md-6 portfolio-item filter-app mt-2">
     <div class="card h-100">
       <img src="\img/foto dokter/{{ $dok->foto }}" class="card-img-top" alt="...">
       <div class="card-body text-center">

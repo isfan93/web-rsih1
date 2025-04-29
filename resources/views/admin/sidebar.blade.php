@@ -51,7 +51,7 @@
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link " href="/media">
+        <a class="nav-link " href="#">
           <i class="ri-file-edit-fill"></i>
           <span>Media</span>
         </a>

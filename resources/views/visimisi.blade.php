@@ -75,9 +75,9 @@
 
           <div class="col-lg-3 col-md-6 portfolio-item filter-app mt-2">  
             <div class="card h-100">
-              <img src="img/manajemen/dr iva.jpg" class="card-img-top" alt="...">
+              <img src="img/manajemen/dr rey.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="card-title fw-bold">dr. Iva Tania</h5>
+                <h5 class="card-title fw-bold">dr. Reynaldi Fattah, MARS</h5>
                 <p class="card-text">Manajer Pelayanan Medis</p>
               </div>
             </div>
@@ -87,7 +87,7 @@
             <div class="card h-100">
               <img src="img/manajemen/depi.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="card-title fw-bold">Depi Rismayanti, S.Kep</h5>
+                <h5 class="card-title fw-bold">Depi Rismayanti, S.Kep.,Ners</h5>
                 <p class="card-text">Manajer Keperawatan</p>
               </div>
             </div>
